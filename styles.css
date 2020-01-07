@@ -66,16 +66,19 @@ main {
 
 article {
     position: relative;
-    
     background-color: white;
     max-width: 35rem;
     padding: 1rem 3rem;
 }
 
+article header {
+    margin-top: 2em;
+}
+
 article .date {
     position: absolute;
-    font-size: 0.63em;
-    right: 2em;
+    font-size: 0.8em;
+    right: 2.5em;
     top: 1em;
 }
 
@@ -83,6 +86,7 @@ h1 {
     font-family: 'geomanistregular';
     font-size: 4em;
     margin: 0.3em 0;
+    line-height: 0.92em;
 }
 
 h2, h3 {
