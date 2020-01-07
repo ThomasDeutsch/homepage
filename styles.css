@@ -60,6 +60,10 @@ aside .author {
     font-size: 1.3em;
 }
 
+aside .info {
+    margin-top: 1em;
+}
+
 article {
     margin-left: 10rem;
     background-color: white;
