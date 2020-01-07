@@ -61,10 +61,18 @@ aside .author {
 }
 
 article {
+    position: relative;
     margin-left: 10rem;
     background-color: white;
     max-width: 35rem;
     padding: 1rem 3rem;
+}
+
+article.date {
+    position: absolute;
+    font-size: 0.63em;
+    right: 2em;
+    top: 1em;
 }
 
 h1 {
