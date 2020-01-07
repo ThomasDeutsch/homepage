@@ -62,13 +62,15 @@ aside .author {
 
 .container {
     position: relative;
+    display: block;
     margin-left: 10rem;
     max-width: 45rem;
 }
-
-.container > * {
-    display: inline-block;
-}
+@media (min-width: 850px) {
+    .container {
+        display: flex;
+    }
+ }
 
 article {
     position: relative;
