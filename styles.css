@@ -74,9 +74,8 @@ p {
     line-height: 1.55em;
     letter-spacing: 0.045em;
 }
-p::before {
-    content: '<div class="marker"><div>';
-}
+
+
 
 a {
     border-bottom: 1px solid #ab9768;
