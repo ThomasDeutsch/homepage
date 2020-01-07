@@ -71,8 +71,15 @@ aside .author {
         display: block;
         margin-left: 0;
     }
-    html {
-        font-size: 23px;
+    h1 {
+        font-size: 6em;
+    }
+    p {
+        line-height: 2.1em;
+    }
+
+    article .date {
+        font-size: 1em;
     }
  }
 
