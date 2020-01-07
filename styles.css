@@ -7,6 +7,28 @@
 }
 
 
+html {
+    font-size: 20px;
+}
+
+
+body {
+    background-color: #f5f4f0;
+    color: #435259;
+}
+
+article {
+    background-color: white;
+    max-width: 50rem;
+    padding: 0 3rem;
+}
+
+
 h1 {
     font-family: 'geomanistregular';
+}
+
+
+p {
+    line-height: 1.55em;
 }
