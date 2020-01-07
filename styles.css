@@ -58,6 +58,10 @@ aside img {
     box-shadow: inset 0 0 5px #333;
 }
 
+aside .author {
+    font-size: 1.3em;
+}
+
 article {
     margin-left: 10rem;
     background-color: white;
