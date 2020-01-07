@@ -62,7 +62,7 @@ aside .author {
     font-size: 1.3em;
 }
 
-main {
+.container {
     position: relative;
     margin-left: 10rem;
     max-width: 45rem;
