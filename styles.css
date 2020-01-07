@@ -99,7 +99,7 @@ h2, h3 {
 
 
 p {
-    line-height: 1.55em;
+    line-height: 1.8;
 }
 
 p.example {
@@ -126,10 +126,6 @@ a {
     h1 {
         font-size: 6em;
     }
-    p {
-        line-height: 2.1em;
-    }
-
     article .date {
         font-size: 1em;
     }
