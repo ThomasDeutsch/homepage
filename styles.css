@@ -66,22 +66,7 @@ aside .author {
     margin-left: 18%;
     max-width: 45rem;
 }
-@media (max-width: 1100px) {
-    .container {
-        display: block;
-        margin-left: 0;
-    }
-    h1 {
-        font-size: 6em;
-    }
-    p {
-        line-height: 2.1em;
-    }
 
-    article .date {
-        font-size: 1em;
-    }
- }
 
 article {
     position: relative;
@@ -131,3 +116,24 @@ a {
 }
 
 
+
+@media (max-width: 1100px) {
+    .container {
+        display: block;
+        margin-left: 0;
+        max-width: 100%;
+    }
+    article {
+        max-width: 35em;
+    }
+    h1 {
+        font-size: 6em;
+    }
+    p {
+        line-height: 2.1em;
+    }
+
+    article .date {
+        font-size: 1em;
+    }
+ }
