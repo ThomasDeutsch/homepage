@@ -66,7 +66,7 @@ aside .author {
     margin-left: 18%;
     max-width: 45rem;
 }
-@media (max-width: 850px) {
+@media (max-width: 1100px) {
     .container {
         display: block;
         margin-left: 0;
