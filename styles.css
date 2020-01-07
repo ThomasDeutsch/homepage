@@ -25,6 +25,7 @@ html {
 
 
 body {
+    margin: 0;
     background-color: #f5f4f0;
     color: #435259;
 }
@@ -43,4 +44,10 @@ h1 {
 
 p {
     line-height: 1.55em;
+}
+
+a {
+    border-bottom: 1px solid #ab9768;
+    text-decoration: none;
+    color: #ab9768;
 }
