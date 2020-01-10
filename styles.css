@@ -91,6 +91,7 @@ article section {
 
 article figure {
     width: 100%;
+    margin: 0;
 }
 
 figure img {
