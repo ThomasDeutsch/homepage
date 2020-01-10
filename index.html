@@ -107,6 +107,69 @@
           </section>
 
 
+          <section>
+            <h2>A Duality</h2>
+
+              You are in sprint 32.
+              Someone shows you a database schema.
+              Do we need the field "x" ? 
+              You could say:  it depends.
+              It depends on what?
+              It depends on the context.
+              Or your answer could be: Yes, we need field "x" because it is required for the user registration process.
+              But you need to know all the scenarios that need field "x" to be able do give an answer of this quality.
+              
+              This demonstrates a duality in how we think about software.
+              
+              On one hand, we have a scenario based thinking that lets us define in a very human way how things
+              should work.
+              "the user should be able to register by providing the needed information"
+              
+              On the other hand, we write software, because we need something that is machine-executable.
+              We add methods, classes, components, ..., to our software construct, so that it is capable of running our scenario.
+              "we need to implement a new service, the form-component needs to include field x, ..." 
+              
+              As our software grows, it becomes increasingly difficult to make the connection between the written software ( the software construct ) and the scenario ( the artifact ).
+              
+              < IMAGE OF 2 different VIEWS in one circle>
+              
+              Designers and Testers are seeing scenarios, a developer will see the software construct. 
+              
+              
+              Developers alienate themselfes from the rest of the team on many levels.
+              
+              
+              enabling unwanted scenarios
+              When we implement a new feature, we add new functionality to parts of our construct - but what unwanted scenarios we have we accidently enabled, too? can we test this?
+              
+              complecting scenarios
+              After some changes to the same part of our construct, we might fail to reason about it. What scenarios have shaped this component? Why is this if/else here?
+              If we are not able to reason about our code - how confident can we be in making changes to it?
+              
+              powerful software 
+              Instead of enabling scenarios - we see the increase in the power of parts of our software.
+              The wish is, that the software will be so well designed, that it would be easy to enable possible future scenarios. Because we choose the right language, framework or abstraction. 
+              We want to create something that can be used in other projects as well.
+              Those are good goals, but we easily fall into a trap. 
+              In our minds, it becomes more about our/your powerful software - and less about the needs of the users.
+              
+              
+              We see this as a given.
+              This is how we do things
+              But not any more - you have ha choice!
+              It can make a lot of sense to 
+              
+              
+              We can break the duality - we have a choice. 
+              It requires change - a bit of change in mindset as well - mostly from the developers - i am sorry.
+              
+              We can address our code, based on the artifacts and we want do this based on a simple principle: to value interactions, meaningful conversations and a shared artifact to work on.
+
+
+
+          </section>
+
+
 
 
         </article>
