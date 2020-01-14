@@ -97,36 +97,51 @@
             <p class="example">There is something called a "Developer Handoff".<br>
               After completion of his work, a designer will hand his work results over to the developer team. If he made a good job, the 
               developers are able to understand enough to implement the neccecary code to make an interactive UI.<br>
-              The work is clearly divided - but what is easily missed? It is the nessecary interactions between designers and developers.
-              Even if the developers are able to implement the code, what about the shared understanding of the whole?
+              The work is clearly divided - but what is easily missed? It is the nessecary interactions between designers and developers.<br>
+              Even if the developers are able to implement the code, what about the shared understanding of the whole?<br>
               Why are the designs made that way? What about the developers who would love to give an opinion before the designs are finished?
+              Is this an environment where everyone can feel engaged to deliver the best possible product?
             </p>
 
-            <p>For many companies we work for, this is the default behaviour. It is the culture of our economy: the division of labor.
-            As a result, a strict process is mostly seen as very benificial to our employees.
-            To be a worker in a process, you are make yourself replaceable and your work is more easily measured and checked, to optimize the efficency.
-            We are focused on doing things right.</p>
+            <p>For many companies we work for, this is the default behaviour. It is the culture of our economy: the division of labor.<br>
+            As a result, a strict process is mostly seen as very benificial to our employees.<br>
+            To be a worker in a process, you are make yourself replaceable and your work is more easily measured and checked, to optimize for efficency.
+            We are focused on doing things right.<br>
+            This is what coordination is for.</p>
 
+            <p>On the other hand, we have integration.<br>
+            Only if we have a common ground we are able to work on a shared understanding of what we try to accomplish.<br>
+            A team can be vere efficent and finish a lot of features, but features do not guarantee an improvement.<br>
+            Only if the system is improved as a whole, a feature will add value.
+            This point is also explained by W. Edwards Deming: <br>
+          </p>
 
+            <p class="quote">
+            "It is not enough to do your best; you must know what to do, and then do your best"
+            </p>
             
-            <p>We will find ourselves in a situation where we are not able to take a step back to ask some important questions. 
-            You pick the task from the board and you keep your head down.</p>
-            
-            <p>This is why we need to value integration. This is the Voldemort problem we are responsible for.
-            We are dehumanizing our workspace.</p>
-            
-            <p>I am sure, that everyone would choose to have meaningful conversations and feel engaged to deliver the best possible product.
-            We should know that there is a choice - but it requires a bit of change. 
-            In my opinion, there is a main reason why we loose the common ground.
-            It is the way developers implement scenarios of behaviour - in contrast to the reqirements and testing.
-            It seems that there are two worlds that can not be overlapped.</p>
+            <p>This is why we need coordination AND integration.<br>
+              We are very much devoted to do things right, even if we do the wrong thing. This makes the wrong thing even wronger.
+
+              Why are we so drawn to this efficency? is it our culture?
+              I would say no.
+              At the start of an agile project, you often can see something like this.
+              We all come together.
+              Because nobody needs to be an expert, everyone is engage to partition in the shape of the product.
+
+              After some sprints, we seem to drift apart.
+              Even with all the dailies and retrospectives - we will lose the ability to openly discuss everything.
+              I think that this is due to a duality that splits our teams apart - something at the very core of how we work - something we see as a given.
+
+            </p>
           </section>
 
 
           <section>
             <h2>Duality</h2>
 
-            <p>You are in sprint 32.<br>
+
+            <p class="example">You are in sprint 32.<br>
               Someone shows you a database schema.<br>
               Do we need the field "x"?<br>
               You could say:  it depends.<br>
@@ -135,53 +150,56 @@
               Or your answer could be: Yes, we need field "x" because it is required for the user registration process.
               But you need to know all the scenarios that need field "x" to be able do give an answer of this quality.</p>
               
-            <p>This demonstrates a duality in how we think about software.</p>
-              
-            <p>
-              On one hand, we have a scenario based thinking that lets us define in a very human way how things
-              should work.
+            <p>On one hand, we have a scenario based thinking that lets us define in a very human way how things
+              should work.<br>
               "the user should be able to register by providing the needed information"
+            </p>
               
-              On the other hand, we write software, because we need something that is machine-executable.
+            <p>On the other hand, we write software, because we need something that is machine-executable.
               We add methods, classes, components, ..., to our software construct, so that it is capable of running our scenario.
-              "we need to implement a new service, the form-component needs to include field x, ..." 
+              "we need to implement a new service, the form-component needs to include field x, ..."</p> 
               
-              As our software grows, it becomes increasingly difficult to make the connection between the written software ( the software construct ) and the scenario ( the artifact ).
+              <p>As our software grows, it becomes increasingly difficult to make the connection between the written software
+                ( the software construct ) and the scenario ( the artifact ).</p>
               
-              < IMAGE OF 2 different VIEWS in one circle>
-              
+          
+              THE DRIFTING APART IMAGE
+
+              <p>
               Designers and Testers are seeing scenarios, a developer will see the software construct. 
+              Developers alienate themselfes from the rest of the team on many levels.</p>
               
               
-              Developers alienate themselfes from the rest of the team on many levels.
+              <h3>enabling unwanted scenarios</h3>
+              <p>When we implement a new feature, we add new functionality to parts of our construct - 
+                but what unwanted scenarios we have we accidently enabled, too? can we test this?
+                Bob Martin tells me we need "negative tests" - but how do we find them?
+              </p>
+
+              <h3>complecting scenarios</h3>
+              <p>After some changes to the same part of our construct, we might fail to reason about it. What scenarios have shaped this component? Why is this if/else here?
+              If we are not able to reason about our code - how confident can we be in making changes to it?</p>
               
+              <h3>powerful software</h3>
+              <p>
+              Instead of enabling scenarios - we see the increase in the power of parts of our software.<br>
+              The wish is, that the software will be so well designed, that it would be easy to enable possible future scenarios.<br>
+              Because we choose the right language, framework or abstraction.<br>
+              We want to create something that can be used in other projects as well.<br>
+              Those are good goals, but we easily fall into a trap. <br>
+              In our minds, it becomes more about our/your powerful software - and less about the needs of the users.</p>
               
-              enabling unwanted scenarios
-              When we implement a new feature, we add new functionality to parts of our construct - but what unwanted scenarios we have we accidently enabled, too? can we test this?
-              
-              complecting scenarios
-              After some changes to the same part of our construct, we might fail to reason about it. What scenarios have shaped this component? Why is this if/else here?
-              If we are not able to reason about our code - how confident can we be in making changes to it?
-              
-              powerful software 
-              Instead of enabling scenarios - we see the increase in the power of parts of our software.
-              The wish is, that the software will be so well designed, that it would be easy to enable possible future scenarios. Because we choose the right language, framework or abstraction. 
-              We want to create something that can be used in other projects as well.
-              Those are good goals, but we easily fall into a trap. 
-              In our minds, it becomes more about our/your powerful software - and less about the needs of the users.
-              
-              
+              <p>
               We see this as a given.
               This is how we do things
               But not any more - you have ha choice!
-              It can make a lot of sense to 
+              It can make a lot of sense to</p>
               
               
-              We can break the duality - we have a choice. 
-              It requires change - a bit of change in mindset as well - mostly from the developers - i am sorry.
+              <p>We can break the duality - we have a choice. 
+              It requires change - a bit of change in mindset as well - mostly from the developers - i am sorry.</p>
               
               We can address our code, based on the artifacts and we want do this based on a simple principle: to value interactions, meaningful conversations and a shared artifact to work on.
-            </p>
 
 
           </section>
