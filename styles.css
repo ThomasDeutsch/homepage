@@ -101,6 +101,10 @@ article figure {
     margin-bottom: 2em;
 }
 
+figcaption {
+    margin-top: 1em;
+}
+
 figure img {
     width: 100%;
 }
