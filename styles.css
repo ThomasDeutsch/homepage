@@ -128,6 +128,13 @@ p.example {
     margin: 0 -0.75em;
 }
 
+p.quote {
+    font-size: 1.2em;
+    font-style: italic;
+    opacity: 0.9;
+    border-left: 3px solid #ab9768;
+}
+
 
 
 a {
