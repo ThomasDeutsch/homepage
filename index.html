@@ -140,8 +140,8 @@
 
             <p>Maybe this is the way it is.<br>
             At the beginning, everyone is on board, we talk about our goals and about the software we want to build.<br>
-            We can not talk all the time, we need to make something, we need to document, create designs and write some code.<br>
-            And the more we produced the less we can make big changes. Agility has its limits and at some point the path is set.<br>
+            This can not go on forever, we need to make something. Documentations, creating designs and writing code.<br>
+            And the more we produced the less we can make big changes. Agility has its limits and at some point the path is mostly set.<br>
             Maybe we should rebrand our agile projects to be more honest, so we don't raise false expectations.<br> 
             "10-sprint agile then mostly waterfall"?<br>
           </p>
@@ -153,12 +153,13 @@
             Some of you might got the instructions to "not disturb" the designers or developers - you can ask me about my experience.
           </p>
 
-          <p>This is hard work, and if it is not encouraged, your engagement will drop like a stone.</p>
+          <p>This is hard work, and if it is not encouraged, your engagement will drop like a rock.</p>
           
           <p><b>What would happen if we change the system?</b> To a system, where integration is as essential as coordination?<br>
-            This systems will provide a common ground that is never lost.<br>
+            This system will provide a common ground that is not so easily lost.<br>
             I think this can be done in many different ways. I will show you one.<br>
-            The common ground i want to create is at he lowest level of our system. It is about resolving a duality at the very core of how we work.
+            The common ground i want to create is at the lowest level of our system. It is about resolving a duality at the very core of how we work.<br>
+            We will have something that unifies Designing, Programming and Testing. At some lower level, there will be no difference between them - the common ground.<br>
           </p>
           </section>
 
@@ -166,22 +167,30 @@
           <section>
             <h2>Duality</h2>
 
-            <p>The following example describes a situation where two people are hindered from having a meaningful conversation, because
-              of that duality we see as a given.
+            <p>The following example describes a situation where we are hindered from having a meaningful conversation, because
+              of a duality we see as a given.
             </p>
 
             <p class="example">You are in sprint 32.<br>
               Someone shows you a database schema.<br>
-              Do we need the field "x"?<br>
-              You could say:  it depends.<br>
+              Why do we need field "x"?<br>
+              You could say: it depends.<br>
               It depends on what?<br>
-              It depends on the context.<br>
-              Or your answer could be: Yes, we need field "x" because it is required for the user registration process.
-              But you need to know all the scenarios that need field "x" to be able do give an answer of this quality.</p>
+              It depends on the context<br>
+              <br>
+              Your answer could be: Yes, we need field "x" because it is required for the user registration process and for...<br>
+              <br>
+              <i>This is an answer someone might expect, but to be able to give it, a developer needs to know all the scenarios
+              that need field "x" and this information is not easily found.</i></p>
+
+              <figure>
+                <img src="img/divide.svg" alt="">
+                <figcaption>the divide</figcaption>
+              </figure>
               
             <p>On one hand, we have a scenario based thinking that lets us define in a very human way how things
               should work.<br>
-              "the user should be able to register by providing the needed information"
+              "the user is able to register by providing the needed information"
             </p>
               
             <p>On the other hand, we write software, because we need something that is machine-executable.
@@ -189,10 +198,13 @@
               "we need to implement a new service, the form-component needs to include field x, ..."</p> 
               
               <p>As our software grows, it becomes increasingly difficult to make the connection between the written software
-                ( the software construct ) and the scenario ( the artifact ).</p>
+                (the software construct) and the scenario (the artifact).</p>
               
           
-              THE DRIFTING APART IMAGE
+                <figure>
+                    <img src="img/driftapart.svg" alt="">
+                    <figcaption>drifting apart</figcaption>
+                </figure>
 
               <p>
               Designers and Testers are seeing scenarios, a developer will see the software construct. 
