@@ -283,7 +283,7 @@
             </ul>
           </p>
           <p>Designers have scetched some first designs, and included input from the developers.<br>
-            They have found some technical requirements that need to be reflected in the UI.<br>
+            They have found some technical requirements and edge-cases that need to be reflected in the UI.<br>
           <ul>
             <li>The slides are loaded asyncrounously. (show a spinner)</li>
             <li>If there is only one slide, the slider has no functionality (show no buttons)</li>
@@ -298,11 +298,25 @@
 
           </p>
           <p class="code">
-            index = state(0);
-            items = scenario(loadItems(url));
-            if(items && items.length > 0) {
+            useScenarios((scenario, state, show) => {
+              const [items] = scenario(loadItems, [url]);
+              const index = state(0);
 
-            }
+              if(items) {
+                show(currentSlide, [index.value]);
+                if(items.length > 1) {
+                  scenario(slideLeftRigt, [index, items.length]);
+                  scenario(rotate, [index, items.length]);
+                  scenario(autoSlide, [slideDuration]);
+                  scenario(playPause);
+                  scenario(jumpToSlide);
+                  scenario(pauseOnLeftRight);
+                  scenario(autoplay);
+                }
+              } else {
+                show(loading);
+              }
+            });
 
           </p>
           </section>
