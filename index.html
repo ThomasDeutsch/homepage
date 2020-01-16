@@ -41,7 +41,7 @@
           </section>
       
           <section class="content">
-            <h2>System Of Parts</h2>
+            <h2>System And Parts</h2>
 
             <p>A way to look at our situation, is through the lens of Systems Thinking.</p>
             <p>Systems Thinking was pioneered by the work of <a href="https://en.wikipedia.org/wiki/Russell_L._Ackoff">Russell Ackoff</a>. This is one of my favorite clips, where
@@ -207,10 +207,9 @@
               
             <p>On the other hand, we write software, because we need something that is machine-executable.
               We add methods, classes, components, ..., to our software construct, so that it is capable of running our scenario.
-              "we need to implement a new service, the form-component needs to include field x, ..."</p> 
-              
-              <p>As our software grows, it becomes increasingly difficult to make the connection between the written software
-                (the software construct) and the scenario (the artifact).</p>
+              "we need to implement a new service, the form-component needs to include field x, ..."</p>
+            <p>As our software grows, it becomes increasingly difficult to make the connection between the written software
+              (the software construct) and the scenario (an artifact).</p>
               
           
               <figure>
@@ -219,41 +218,39 @@
               </figure>
 
 
-              <p>From a developer perspective, this divide creates a world of problems.</p>
+              <p>From a developer perspective, this divide creates a world of problems. Here are my top 4.</p>
               
-              <h4>enabling unwanted scenarios</h4>
-              <p>When we implement a new feature, we add new functionality to parts of our construct - 
-                but what unwanted scenarios we have we accidently enabled, too? can we test this?<br>
-                Bob Martin tells me that i need "negative tests" - but it is not that easy to test the unexpected.
-              </p>
-
-              <h4>complecting scenarios</h4>
-              <p>After some changes to the same part of our construct, we might fail to reason about it.<br>
+              <h4>1. complecting scenarios</h4>
+              <p>After adding functionality to the same part of our construct, we might fail to reason about it.<br>
                 What scenarios have shaped this component?<br>
                 Why is this if/else here?<br>
-              If we are not able to reason about our code - how confident can we be in making changes to it?</p>
-              
-              <h4>powerful software</h4>
-              <p>Instead of enabling scenarios - we see the increase in the power of parts of our software.<br>
-              The wish is, that the software will be so well designed, that it would be easy to enable possible future scenarios.<br>
-              We want to create something that can be used in other projects as well.<br>
-              In our minds, it will become more about our/your powerful software - and less about the needs of the users.</p>
+              If we are not able to reason about our code, how can we make confident changes?</p>
 
-              <h4>programmer confinience</h4>
-              <p>The constructs have attributes of themselfes. Programmers love to talk about them. Elegant code or the benefits of using a npm package.
-                The focus esily shifts to those inner attributes.
+              <h4>2. enabling unwanted scenarios</h4>
+              <p>When we implement a new feature, we add new functionality to parts of our construct - 
+                but what unwanted scenarios we have we accidently enabled, too? can we test this?<br>
+                Bob Martin tells me that i need "negative tests" - but it is not that easy.
+              </p>
+              
+              <h4>3. change in mindset</h4>
+              <p>We want to increase the power of our software.<br>
+              The wish is, that the software will be so well constructed, that it would be easy to enable possible future scenarios, or even possible future projects.<br>
+              We focus on our powerful software - and less on the needs of our users.</p>
+
+              <h4>4. programmer confinience</h4>
+              <p>The constructs have attributes of themselfes. We talk about elegant code or the latest version of framework x. Without the focus on
+                the scenarios we need to enable, we often see all the benefits and only some of the drawbacks.
                 Before i quote every part of the talk <a href="https://www.infoq.com/presentations/Simple-Made-Easy/">Simple Made Easy</a> by Rich Hickey, please
-                go ahead and watch it - the part where he talks about constructs vs artifacts starts at 9:18.<br>
-                I can highly recommend this talk.<br>
+                go ahead and watch it.<br>
               </p>
           </section>
 
 
           <section>
             <h2>The Experiment</h2>
-            <p>It all comes down to a simple experiment.<br>
+            <p>It all comes down to an experiment.<br>
             What will happen if we use scenarios in our code?<br>
-            As programmers, we know the benefits of modular UI-components and modular architecture - what about adding scenarios to our code in a modular fashion?<br>
+            As programmers, we know the benefits of modular UI-components and  modular architecture - what about adding scenarios to our code in a modular fashion?<br>
             The artifacts (the scenarios) will make the full circle. They will remain during the whole process - from design to development and testing.<br>
           </p>
 
