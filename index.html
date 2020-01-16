@@ -298,26 +298,26 @@
 
           </p>
           <p class="code">
-useScenarios((scenario, state, show) => {
-  const [items] = scenario(loadItems, [url]);
-  const indexState = state(0); // initial index is 0
+    useScenarios((scenario, state, show) => {
+      const [items] = scenario(loadItems, [url]);
+      const indexState = state(0); // initial index is 0
 
-  if(items) {
-    show(currentSlide, [items, indexState.value]);
-    if(items.length > 1) {
-      scenario(slideLeftRigt, [indexState, items.length]);
-      scenario(rotate, [indexState, items.length]);
-      scenario(jumpToSlide, [indexState]);
-      const [isPlaying] = scenario(playPause, [3000]);
-      if(isPlaying) {
-        scenario(pauseOnLeftRight);
+      if(items) {
+        show(currentSlide, [items, indexState.value]);
+        if(items.length > 1) {
+          scenario(slideLeftRigt, [indexState, items.length]);
+          scenario(rotate, [indexState, items.length]);
+          scenario(jumpToSlide, [indexState]);
+          const [isPlaying] = scenario(playPause, [3000]);
+          if(isPlaying) {
+            scenario(pauseOnLeftRight);
+          }
+          scenario(autoplay);
+        }
+      } else {
+        show(loading);
       }
-      scenario(autoplay);
-    }
-  } else {
-    show(loading);
-  }
-});
+    });
           </p>
           </section>
 
