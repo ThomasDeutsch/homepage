@@ -275,7 +275,7 @@
             <ul>
               <li>The user is able to slide to the left and right.</li>
               <li>The slider can rotate in both directions.</li>
-              <li>The slider will have a play function and slides after x seconds.</li>
+              <li>The slider will have a play function and slides after x ms.</li>
               <li>The slider can be paused at any time.</li>
               <li>Bulletpoints can be used to jump to a specific slide.</li>
               <li>If the user slides to the left or the right, the slider will pause.</li>
@@ -300,14 +300,14 @@
           <p class="code">
             useScenarios((scenario, state, show) => {
               const [items] = scenario(loadItems, [url]);
-              const index = state(0);
+              const indexState = state(0); // initial index is 0
 
               if(items) {
-                show(currentSlide, [index.value]);
+                show(currentSlide, [items, indexState.value]);
                 if(items.length > 1) {
-                  scenario(slideLeftRigt, [index, items.length]);
-                  scenario(rotate, [index, items.length]);
-                  scenario(autoSlide, [slideDuration]);
+                  scenario(slideLeftRigt, [indexState, items.length]);
+                  scenario(rotate, [indexState, items.length]);
+                  scenario(autoSlide, [3000]);
                   scenario(playPause);
                   scenario(jumpToSlide);
                   scenario(pauseOnLeftRight);
