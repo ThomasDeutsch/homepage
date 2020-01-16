@@ -243,18 +243,29 @@
                 Before i quote every part of the talk <a href="https://www.infoq.com/presentations/Simple-Made-Easy/">Simple Made Easy</a> by Rich Hickey, please
                 go ahead and watch it.<br>
               </p>
+
+              <p>I would argue that developers suffer the most from the consequences of this divide.<br>
+              But those problems are self-inflicted. Developers need to find ways to assess the construct based on the artifacts.</p>
+
+              <p>At the end, everbody needs to pay the consequences. From my point of view, this duality is one of the biggest problems in modern software development.<br>
+                Maybe we need another crisis for this to change. Maybe the growing success of the no-code movement will teach us.<br>
+              </p>
+
+              <p>Luckily, this article is about improvement and a positive outlook, and i promised a practical solution for this problem.<br>
+                It is not a silver bullet, but i hope i can demostrate that there is a choice.<br>
+              </p>
           </section>
 
 
           <section>
             <h2>A Plan</h2>
-            <p>It all comes down to a simple experiment.<br>
-              What will happen the scenarios we enabled are visible in our code?<br>
-            As programmers, we know the benefits of modular UI-components and  modular architecture - what about adding scenarios to our code in a modular fashion?<br>
-            The artifacts (the scenarios) will make the full circle. They will remain during the whole process - from design to development and testing.<br>
-          </p>
+            <p>At this point, it all comes down to a simple experiment.<br>
+              What will happen the scenarios we want to enable are directly reflected in our code?<br>
+              What will happen if the scenarios (the artifact) is always present and unifies design, development and testing?<br>
+            </p>
 
-          <p>The team has agreed on a couple of requirements for an image-slider component.
+            <p>For this experiment, we will develop a simple image slider.<br>
+              Our team has agreed on a couple of requirements.<br>
             <ul>
               <li>The user is able to slide to the left and right.</li>
               <li>The slider can rotate in both directions.</li>
@@ -265,11 +276,20 @@
               <li>The slider will start to play automatically</li>
             </ul>
           </p>
-          <p>Designers have created some designs, and included some input from the developers:<br>
+          <p>Designers have scetched some first designs, and included input from the developers.<br>
+            They have found some technical requirements that need to be reflected in the UI.<br>
           <ul>
             <li>The slides are loaded asyncrounously. (show a spinner)</li>
-            <li>If there is only one slide, the slider has no functionality (show disabled buttons)</li>
+            <li>If there is only one slide, the slider has no functionality (show no buttons)</li>
           </ul>
+          <p>At this point, we can talk about naming. Can we find short names for the different scenarios?<br>
+            And how do we name the specific events that will happen? For example: sliding to the left = slideLeft?<br>
+          </p>
+
+          <p>Lets see what it could look like to implement the scenarios.<br>
+          For this, i have used a lot of ideas from "behavioural programming" or "scenario based programming".<br>
+        </p>
+
           </p>
           <p class="code">
             index = state(0);
