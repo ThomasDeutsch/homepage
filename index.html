@@ -193,7 +193,7 @@
             </p>
             <p>Your answer could be: Yes, we need field "x" because it is required for the user registration process and for...<br>
                 This is an answer someone might expect, but to be able to give it, a developer needs to know all the scenarios
-                that need field "x" and this information is not easily found.
+                that need field "x" and this information might not be easily found.
             </p>
               
             <figure>
@@ -202,24 +202,27 @@
             </figure>
               
             <p>On one hand, we have a scenario based thinking that lets us define in a very human way how things
-              should work.<br>
-              "the user is able to register by providing the needed information"
+              should work. This is in fact how we -as humans- try to make sense of the word that surrounds us.<br>
+              Like: "the user is able to register by providing the needed information".
             </p>
               
             <p>On the other hand, we write software, because we need something that is machine-executable.
               We add methods, classes, components, ..., to our software construct, so that it is capable of running our scenario.
               "we need to implement a new service, the form-component needs to include field x, ..."</p>
-            <p>As our software grows, it becomes increasingly difficult to make the connection between the written software
-              (the software construct) and the scenario (an artifact).</p>
               
+              <p>Design and Testing will describe the software in terms of "scenarios" (seen on the left).<br>
+                On the right side, developers will describe the software in terms of an executable software construct.</p>
           
               <figure>
                   <img src="img/driftapart.svg" alt="">
                   <figcaption>drifting apart</figcaption>
               </figure>
 
+              <p>This is the divide at the very core of how we work.<br>
+                A duality that is at the very core of every iterative process.<br>
+              </p>
 
-              <p>From a developer perspective, this divide creates a world of problems. Here are my top 4.</p>
+              <p>From a developer perspective, this duality creates a world of problems. Here are my top 4.</p>
               
               <h4>1. complecting scenarios</h4>
               <p>After adding functionality to the same part of our construct, we might fail to reason about it.<br>
@@ -246,9 +249,10 @@
               </p>
 
               <p>I would argue that developers suffer the most from the consequences of this divide.<br>
-              But those problems are self-inflicted. Developers need to find ways to assess the construct based on the artifacts.</p>
+              But those problems are somehow self-inflicted. Developers need to find ways to assess the construct based on the artifacts.</p>
 
               <p>At the end, everbody needs to pay the consequences. From my point of view, this duality is one of the biggest problems in modern software development.<br>
+                This will divide every team and it will always be something we have to fight against.<br>
                 Maybe we need another crisis for this to change. Maybe the growing success of the no-code movement will teach us.<br>
               </p>
 
