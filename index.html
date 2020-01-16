@@ -300,14 +300,14 @@
           <p class="code">
     useScenarios((scenario, state, show) => {
       const items = scenario(loadItems, [url]).value;
-      const [index, setIndex] = state(0);
+      const indexState = state(0);
 
       if(items) {
-        show(currentSlide, [items, index]);
+        show(currentSlide, [items, indexState.value]);
         if(items.length > 1) {
-          scenario(slideLeftRigt, [index, setIndex, items.length]);
-          scenario(rotate, [index, setIndex, items.length]);
-          scenario(jumpToSlide, [index, setIndex, items.length]);
+          scenario(slideLeftRigt, [indexState, items.length]);
+          scenario(rotate, [indexState, items.length]);
+          scenario(jumpToSlide, [indexState, items.length]);
           const [isPlaying] = scenario(playPause, [3000]);
           if(isPlaying) {
             scenario(pauseOnLeftRight);
