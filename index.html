@@ -311,8 +311,28 @@
           }
         }
       }
-    };
-          </p>
+    };</p>
+
+    <p>If you want to go into the details - here is the complete code.<br>
+      Uncomment a scenario and see what happens.<br>
+      There is a lot to unpack how the modular scenario system is constructed.<br>
+      Most ideas came from <a href="http://www.wisdom.weizmann.ac.il/~bprogram/">Behavioral Programming</a>. 
+      I implemented this as a react-hook with no 3rd party dependencies.<br>
+    </p>
+
+    <p>In the next article, i will to go into details.</p>
+    
+    <p>The scaffolding is needed for a simple reason - hierarchy.<br>
+      Some scenarios only make sense, if other scenarios are enabled or in a specific state.<br>
+      For example, we do not need the scenario "jumpToSlide", if there is only one slide.<br>
+    </p>
+
+    <p>What is the difference of all this?<br>
+      This demonstrates that we are able to address our code, based on the scenarios we want to enable.<br>
+      There is not a single element that is revolutionary - it is simply up to us to make the choice.<br>
+    </p>
+
+
           </section>
 
         </article>
