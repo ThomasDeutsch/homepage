@@ -184,7 +184,7 @@
               <figcaption>the divide</figcaption>
             </figure>
               
-            <p>On one hand, we have a scenario based thinking that lets us define in a very human way how things
+            <p>This is the duality. On one hand, we have a scenario based thinking that lets us define in a very human way how things
               should work. This is in fact how we -as humans- try to make sense of the word that surrounds us.<br>
               Like: "the user is able to register by providing the needed information".
             </p>
@@ -193,7 +193,7 @@
               We add methods, classes, components, ..., to our software construct, so that it is capable of running our scenario.
               "we need to implement a new service, the form-component needs to include field x, ..."</p>
               
-              <p>Design and Testing will describe the software in terms of "scenarios" (seen on the left).<br>
+              <p>Design and Testing will describe the software in terms of scenarios (seen on the left).<br>
                 On the right side, developers will describe the software in terms of an executable software construct.</p>
           
               <figure>
@@ -211,7 +211,8 @@
               <p>After adding functionality to the same part of our construct, we might fail to reason about it.<br>
                 What scenarios have shaped this component?<br>
                 Why is this if/else here?<br>
-              If we are not able to reason about our code, how can we make confident changes?</p>
+              If we are not able to reason about our code, how can we make confident changes?<br>
+              Complecting scenarios will result in complexity.</p>
 
               <h4>2. enabling unwanted scenarios</h4>
               <p>When we implement a new feature, we add new functionality to parts of our construct - 
@@ -234,8 +235,8 @@
               <p>I would argue that developers suffer the most from the consequences of this divide.<br>
               But those problems are somehow self-inflicted. Developers need to find ways to assess the construct based on the artifacts.</p>
 
-              <p>At the end, everbody needs to pay the consequences. From my point of view, this duality is one of the biggest problems in modern software development.<br>
-                This will divide every team and it will always be something we have to fight against.<br>
+              <p>At the end, everbody needs to pay the consequences.<br>
+                From my point of view, this duality is one of the biggest problems in modern software development.<br>
                 Maybe we need another crisis for this to change. Maybe the growing success of the no-code movement will teach us.<br>
               </p>
 
@@ -244,8 +245,8 @@
               </p>
 
               <p>What would happen if we change the system?<br>
-                To a system, where integration is as essential as coordination?<br>
-                This system will provide a common ground that is not so easily lost, even when complexity grows.<br>
+                To a system, where this duality can be resolved?<br>
+                Where we are able to address all 4 problems i have listed - at once.<br>
                 I am sure, this can be done in many different ways, i will demonstrate the one i know.<br>
                 It is about resolving a duality at the very core of how we work.<br>
               </p>
@@ -302,26 +303,32 @@
       }
     };</p>
 
-    <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf"></a>here is the complete code.<br>
+    <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
       Uncomment a scenario and see what happens.<br>
       There is a lot to unpack how the modular scenario system is constructed.<br>
       Most ideas came from <a href="http://www.wisdom.weizmann.ac.il/~bprogram/">Behavioral Programming</a>. 
       I implemented this as a react-hook with no 3rd party dependencies.<br>
     </p>
-
-    <p>In the next article, i will to go into details.</p>
     
     <p>The scaffolding is needed for a simple reason: hierarchy.<br>
       Some scenarios only make sense, if other scenarios are enabled or in a specific state.<br>
       For example, we do not need the scenario "jumpToSlide", if there is only one slide.<br>
     </p>
 
-    <p>What is the difference?<br>
-      This demonstrates that we are able to address our code, based on the scenarios we want to enable.<br>
-      There is not a single element that is revolutionary - it is simply up to us to see the benefits.<br>
-      You can see what scenarios you are enabling in your software.<br>
-      And there in front of you, is a great starting point to answer the big question: Is the software enabling scenarios it is supposed to enable?<br>
-    </p>
+    <p>lets look at the problems i have listed before</p>
+
+      <h4>1. complecting scenarios</h4>
+      <p>This demonstrates that we are able to address our code, based on the scenarios we want to enable.<br>
+        And there in front of you, is a great starting point to answer the big question: Is the software enabling scenarios it is supposed to enable?<br>
+        TODO: look at specific scenarios and show difference between complecting and modularity.
+      </p>
+
+      <h4>2. enabling unwanted scenarios</h4>
+      <p>TODO: show that the inter-Object nature of scenarios will make it easyer to prevent unwanted scenarios (show intra-object img)
+        </p>
+
+      <h4>Todo: 3 and 4, only time will tell.</h4>
+      
 
     <br>
     <br>
