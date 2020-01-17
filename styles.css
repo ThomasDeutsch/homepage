@@ -128,7 +128,7 @@ h4 {
 
 
 p {
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 p.example {
@@ -179,3 +179,10 @@ a {
         font-size: 1em;
     }
  }
+
+
+ li {    
+    line-height: 1.7em;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
