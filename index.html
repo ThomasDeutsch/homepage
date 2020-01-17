@@ -301,7 +301,7 @@
     (scenario) => {
       const items = scenario(loadItems, [url]).value;
       if(items) {
-        const index = scenario(showCurrentSlide, [items, state.index.value]).value;
+        const index = scenario(showCurrentSlide, [items]).value;
         if(items.length > 1) {
           scenario(slideLeftRigt, [index, items.length]);
           scenario(rotate, [index, items.length]);
