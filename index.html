@@ -265,14 +265,15 @@
 
           <section>
             <h2>Experiment</h2>
-            <p>At this point, it all comes down to a simple experiment.<br>
+            <p>At this point, it all comes down to an experiment.<br>
               What will happen the scenarios we want to enable are directly reflected in our code?<br>
-              What will happen if the scenarios (the artifact) is always present and unifies design, development and testing?<br>
+              What will happen if the scenarios can be added/removed in a modular way?<br>
             </p>
 
             <p>For this experiment, we will develop a simple image slider.<br>
               Our team has agreed on a couple of requirements.<br>
             <ul>
+              <li>only one slide (the current slide) is shown</li>
               <li>The user is able to slide to the left and right.</li>
               <li>The slider can rotate in both directions.</li>
               <li>The slider will have a play function and slides after x ms.</li>
@@ -283,17 +284,17 @@
             </ul>
           </p>
           <p>Designers have scetched some first designs, and included input from the developers.<br>
-            They have found some technical requirements and edge-cases that need to be reflected in the UI.<br>
+            They have found some technical requirements and edge-cases that need to be reflected in the UI as well.<br>
           <ul>
             <li>The slides are loaded asyncrounously. (show a spinner)</li>
             <li>If there is only one slide, the slider has no functionality (show no buttons)</li>
           </ul>
-          <p>At this point, we can talk about naming. Can we find short names for the different scenarios?<br>
-            And how do we name the specific events that will happen? For example: sliding to the left = slideLeft?<br>
+          <p>We talk about naming. Can we find short names for the different scenarios?<br>
+            We name the specific events that will happen. For example: sliding to the left = slideLeft.<br>
+            Maybe two ore more scenarios should be combined into one?
           </p>
 
-          <p>Lets see what it could look like to implement the scenarios.<br>
-          For this, i have used a lot of ideas from "behavioural programming" or "scenario based programming".<br>
+          <p>The developers started coding and this is the scaffolding of the discussed scenarios in code:<br>
         </p>
 
           </p>
