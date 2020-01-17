@@ -279,21 +279,16 @@
               <li>The slider will have a play function and slides after x ms.</li>
               <li>The slider can be paused at any time.</li>
               <li>Bulletpoints can be used to jump to a specific slide.</li>
-              <li>If the user slides to the left or the right, the slider will pause.</li>
+              <li>If the user changes slides manually, the slider will pause.</li>
               <li>The slider will start to play automatically</li>
             </ul>
           </p>
           <p>Designers have scetched some first designs, and included input from the developers.<br>
             They have found some technical requirements and edge-cases that need to be reflected in the UI as well.<br>
           <ul>
-            <li>The slides are loaded asyncrounously. (show a spinner)</li>
-            <li>If there is only one slide, the slider has no functionality (show no buttons)</li>
+            <li>The slides are loaded asyncrounously. (show a spinner ?)</li>
+            <li>If there is only one slide, the slider has no functionality (show no buttons ?)</li>
           </ul>
-          <p>We talk about naming. Can we find short names for the different scenarios?<br>
-            We name the specific events that will happen. For example: sliding to the left = slideLeft.<br>
-            Maybe two ore more scenarios should be combined into one?
-          </p>
-
           <p>The developers started coding and this is the scaffolding of the discussed scenarios in code:<br>
         </p>
 
@@ -304,14 +299,16 @@
       if(items) {
         const index = scenario(showCurrentSlide, [items]).value;
         if(items.length > 1) {
-          scenario(slideLeftRigt, [index, items.length]);
-          scenario(rotate, [index, items.length]);
           scenario(jumpToSlide, [items.length]);
-          const isPlaying = scenario(playPause, [3000]).value;
-          if(isPlaying) {
-            scenario(pauseOnLeftRight);
+          const leftRight = scenario(slideLeftRight, [index, items.length]);
+          if(leftRight) {
+            scenario(rotate, [index, items.length]);
+            const isPlaying = scenario(playPause, [3000]).value;
+            if(isPlaying) {
+              scenario(pauseOnIndexChange);
+            }
+            scenario(autoplay);
           }
-          scenario(autoplay);
         }
       }
     };
