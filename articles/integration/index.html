@@ -307,12 +307,12 @@
   <span style="color: #006699; font-weight: bold">const</span> items <span style="color: #555555">=</span> scenario(loadItems, [url]).value;
   <span style="color: #006699; font-weight: bold">if</span>(items) {
     <span style="color: #006699; font-weight: bold">const</span> index <span style="color: #555555">=</span> scenario(showCurrentSlide, [items]).value;
-    <span style="color: #006699; font-weight: bold">if</span>(items.length <span style="color: #555555">&gt;</span> <span style="color: #FF6600">1</span>) {
+    <span style="color: #006699; font-weight: bold">if</span>(items.length <span style="color: #555555">&gt;</span> <span>1</span>) {
       scenario(jumpToSlide, [items.length]);
       <span style="color: #006699; font-weight: bold">const</span> leftRight <span style="color: #555555">=</span> scenario(slideLeftRight, [index, items.length]);
       <span style="color: #006699; font-weight: bold">if</span>(leftRight) {
         scenario(rotate, [index, items.length]);
-        <span style="color: #006699; font-weight: bold">const</span> isPlaying <span style="color: #555555">=</span> scenario(playPause, [<span style="color: #FF6600">3000</span>]).value;
+        <span style="color: #006699; font-weight: bold">const</span> isPlaying <span style="color: #555555">=</span> scenario(playPause, [<span>3000</span>]).value;
         <span style="color: #006699; font-weight: bold">if</span>(isPlaying) {
           scenario(pauseOnIndexChange);
         }
@@ -320,7 +320,7 @@
       }
     }
   }
-  };</pre></div>
+};</pre></div>
       </p>
 
       <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
