@@ -327,9 +327,7 @@
     }
   }
 };</pre></div>
-      <p>What is the difference between this, and something like redux-saga?<br>
-        The main goal here, is to represent the scenarios in code, the goals of redux-saga is to make side-effects easier to manage.<br>
-        Scenarios represent threads of behavior. Those threads run above the software construct.<br>
+      <p>Scenarios represent threads of behavior. Those threads run above the software construct.<br>
       </p>
 
       <figure>
@@ -337,9 +335,9 @@
           <figcaption>scenarios are like threads that use different parts of the construct.</figcaption>
       </figure>
 
-      <p>Following a thread like "the user needs to register before he can post a comment" can touch many parts of the construct.<br>
+      <p>A thread like "the user needs to register before he can post a comment" can touch many parts of the construct.<br>
         For example the button to send a request, or the service that make the api call can be part of the same thread, even if they are in different parts of the construct.<br>
-        Usually, the developer needs to keep those threads in his head when i tries to understand the code.<br>
+        Usually, the developer needs to keep those threads in his head when he tries to understand the code.<br>
       </p>
 
       <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
