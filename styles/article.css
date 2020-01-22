@@ -129,6 +129,10 @@ article figure:hover svg {
     opacity: 1;
 }
 
+article figure:hover svg .st1 {
+    fill: #420000;
+}
+
 figcaption {
     margin-top: 1em;
 }
