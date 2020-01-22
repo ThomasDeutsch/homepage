@@ -263,8 +263,6 @@
                 Before i quote every part of the talk <a href="https://www.infoq.com/presentations/Simple-Made-Easy/">Simple Made Easy</a> by Rich Hickey, please
                 go ahead and watch it.<br>
               </p>
-
-              <br>
               <br>
               <p>I would argue that developers suffer the most from the consequences of this divide.<br>
               But those problems are somehow self-inflicted. Developers need to find ways to assess the construct based on the artifacts.</p>
@@ -344,6 +342,19 @@
     }
   }
 };</pre></div>
+      <p>The difference between this, and something like redux-saga is best described when we look at the scenario itself.<br>
+        Scenarios represent threads of behavior. Those threads run above the software construct.<br>
+      </p>
+
+      <figure>
+          <img src="img/scenariosandconstruct.svg" alt="">
+          <figcaption>scenarios are like threads that use different parts of the construct.</figcaption>
+      </figure>
+
+      <p>Following a thread like "the user needs to register before he can post a comment" can touch many parts of the construct.<br>
+        For example the button to send a request, or the service service that make the api call.<br>
+        The main goal here, is to represent the scenarios in code, the goals of redux-saga is to make side-effects easier to manage.<br>
+      </p>
 
       <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
         There is a lot to unpack how the modular scenario system is constructed.<br>
@@ -399,7 +410,7 @@
         <p>
           <h4>If you want to know more...</h4>
           <ul>
-            <li><a href="https://vimeo.com/298554103">Luca Matteis talk about Behavioral Programming (video)</a></li>
+            <li><a href="https://medium.com/@lmatteis/b-threads-programming-in-a-way-that-allows-for-easier-changes-5d95b9fb6928">B-threads article from Luca Matteis</a></li>
             <li><a href="http://www.wisdom.weizmann.ac.il/~bprogram/">Behavioral Programming Introduction (page)</a></li>
             <li><a href="https://www.youtube.com/watch?v=EbLh7rZ3rhU">Systems Thinking by Dr. Russell Ackoff (video)</a></li>
             <li><a href="https://www.infoq.com/presentations/Simple-Made-Easy/">Simple made Easy - Rich Hickey (video)</a></li>
