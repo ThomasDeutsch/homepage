@@ -26,8 +26,7 @@
             <p>One year ago, in January 2019, Chris Coyier released the article <a href="https://css-tricks.com/the-great-divide/">The Great Divide</a>.
               He shows that we are facing some challenges by introducing new disciplines and sub-disciplines to the field of software development.<br> 
               What do you need to learn, to call yourself a frontend developer? What even is frontend-development?<br>
-              The difference between "front of the frontend" (UX, UI-Design, a11y) and "back of the frontend" (programming) shows a divide in
-              specializations - that is not without a cost.
+              The difference between "front of the frontend" (UX, UI-Design, a11y) and "back of the frontend" (programming) shows a divide - that is not without cost.
             </p>
             <p>A cost that needs to be addressed: with every spezialization comes the need for integration.<br>
               I would argue, that this is mostly overlooked and it creates one of the biggest problems in modern software development.
@@ -250,6 +249,7 @@
               </p>
           </section>
 
+
           <section>
             <h2>TLDNR</h2>
             <p>In this article, we have seen that different specializations not only need to be coordinated - they need to be integrated as well.<br>
@@ -315,18 +315,19 @@
       }
     };</p>
 
-          <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
-            There is a lot to unpack how the modular scenario system is constructed.<br>
-            Most ideas came from <a href="http://www.wisdom.weizmann.ac.il/~bprogram/">Behavioral Programming</a>. 
-            I implemented this as a react-hook with no 3rd party dependencies.<br>
-            A detailed description will follow in the next article.<br>
-          </p>
-          
-          <p>The scaffolding is needed for a simple reason: hierarchy.<br>
-            Some scenarios only make sense, if other scenarios are enabled or in a specific state.<br>
-            For example, we do not need the scenario "jumpToSlide", if there is only one slide.<br>
-          </p>
-        </section>
+      <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
+        There is a lot to unpack how the modular scenario system is constructed.<br>
+        Most ideas came from <a href="http://www.wisdom.weizmann.ac.il/~bprogram/">Behavioral Programming</a>. 
+        A detailed description will follow in the next article.<br>
+      </p>
+      
+      <p>The scaffolding is needed for a simple reason: hierarchy.<br>
+        Some scenarios only make sense, if other scenarios are enabled or in a specific state.<br>
+        For example, we do not need the scenario "jumpToSlide", if there is only one slide.<br>
+      </p>
+    </section>
+
+
     <section>
       <h2>First Findings</h2>
       <p>
@@ -351,6 +352,7 @@
       </p>
     </section>
 
+
     <section>
         <h2>What Is Next?</h2>
         <p>First, thanks for reading this article.<br>
@@ -361,10 +363,6 @@
           Then i will show the benefits for tesing and describe a full circle with this integrative core.<br>
           Use this RSS-Feed to be notified or follow me at @thomas_deutsch.<br>
         </p>
-
-        <p>Thanks to all who have inspired this article.<br>
-        </p>
-      
     </section>
 
 
