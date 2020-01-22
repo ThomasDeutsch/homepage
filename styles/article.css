@@ -122,6 +122,11 @@ article figure svg {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
+
+article figure:hover svg {
+    opacity: 1;
 }
 
 figcaption {
