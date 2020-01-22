@@ -387,9 +387,8 @@
   <script>
     var el = document.getElementById("video1");
     el.onclick = function() {
-      console.log('click!');
       var newEl = document.createElement('p');
-      newEl.innerHTML = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/OqEeIG8aPPk?start=560" frameborder="0" autoplay="1" showinfo="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>';
+      newEl.innerHTML = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/OqEeIG8aPPk?start=560&autoplay=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>';
       el.parentNode.replaceChild(newEl, el);
     };
   </script>
