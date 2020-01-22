@@ -7,10 +7,10 @@
 
     <item>
         <title>Integration - people over process in modern software development</title>
+        <pubDate>Wed, 22 Jan 2020 13:49:14 GMT</pubDate>
         <description>
-            <img src="https://thomasdeutsch.de/articles/integration/img/integrationTitleRss.svg"/></img>
-            Frontend software development is devided into disciplines and sub-disciplines.
-            They need to be coordinated, as well as integrated into a whole.
+            Frontend software development is devided into disciplines and sub-disciplines.<br>
+            They need to be coordinated, as well as integrated into a whole.<br>
             This article describes how we are able to give integration a central role in our work processes.
         </description>
         <link>https://thomasdeutsch.de/articles/integration/index.html</link>
