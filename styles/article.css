@@ -19,7 +19,6 @@ html {
     white-space: nowrap; /* added line */
 }
 
-
 @font-face {
     font-family: 'geomanistregular';
     src: url('/fonts/geomanist-regular.woff2') format('woff2'),
@@ -173,15 +172,11 @@ p.code {
     padding: 1em;
 }
 
-
-
 a {
     border-bottom: 1px solid #ab9768;
     text-decoration: none;
     color: #ab9768;
 }
-
-
 
 @media (max-width: 980px) {
     .container {
@@ -196,7 +191,6 @@ a {
         font-size: 1em;
     }
  }
-
 
  li {    
     line-height: 1.7em;
