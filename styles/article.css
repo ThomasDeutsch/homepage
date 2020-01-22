@@ -102,6 +102,10 @@ article figure {
     margin-bottom: 2em;
 }
 
+article figure.video {
+    cursor: pointer;
+}
+
 figcaption {
     margin-top: 1em;
 }
