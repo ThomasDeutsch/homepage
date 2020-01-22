@@ -1,10 +1,19 @@
 <?xml version= "1.0"?>
 <rss version= "2.0">
 <channel>
+    <title>thomasdeutsch.de</title>
+    <link>https://thomasdeutsch.de</link>
+    <language>en</language>
+
     <item>
-    <title>Integration - people over process in modern software development</title>
-    <description>Specializations come with a cost. They need to be integrated.</description>
-    <link>https://thomasdeutsch.de/articles/integration/index.html</link>
+        <title>Integration - people over process in modern software development</title>
+        <description>
+            <img src="https://thomasdeutsch.de/articles/integration/img/integrationTitleRss.svg"/>
+            Frontend software development is devided into disciplines and sub-disciplines.<br>
+            They need to be coordinated, as well as integrated into a whole.<br>
+            This article describes how we are able to give integration a central role in our work processes.<br>  
+        </description>
+        <link>https://thomasdeutsch.de/articles/integration/index.html</link>
     </item>
 </channel>
 </rss>
