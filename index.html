@@ -123,9 +123,9 @@
           </p>
             
             <p>This is why we need coordination and integration. They are a complementary pair.<br>
-              On a coordination level, we answer the questionts: how to do things.<br>
-              Integration can lead to the next level by asking "why" questions.
-              Only with coordination and integration we can add value efficently.
+              On a coordination level, we answer the questionts on how to do things. This leads to knowledge.<br>
+              Integration is on next level. By asking "why" questions we can gain understanding. 
+              Only with coordination and integration we can add value efficently. This is called effectiveness.
             </p>
             
             <figure>
@@ -145,26 +145,21 @@
               Can we make choices to enable better integration?
             </p>
 
-            <p>Yes we can.<br>
+            <p>Somehow, we can.<br>
             When we leave our desk and ask a designer/developer a question that starts with "why".<br>
             By not throwing work over the fence and being open for feedback.<br>
             But at the end, we can only do so much. For this to work, everyone needs to be on board.<br>
-            You may have got the advice to not "disturb" the developers/designers. You can ask me about my experience.<br>
-            If your choice is not encouraged, your engagement will drop like a rock.<br>
-            You work against an established culture. And you may have expirenced the meaning of “Culture eats strategy for breakfast”.<br>
+            Advice to not "disturb" the developers/designers, is more common than you might expect.<br>
+            It feels like working against an established culture and like hard work. “Culture eats strategy for breakfast” - and you can feel it.<br>
             </p>
 
             <p>What if we change the system?<br>
-              What if we could have a system where an integrative method is as essential as the process we have chosen?
-              For a system that will provide a common ground that is not easily lost, we have to resolve a problem that is deeply ingrained 
-              in how we work.
+              What if we could have a system where an integrative method is as essential as the process we have chosen?<br>
+              A system that will provide a common ground that is not easily lost.<br>
+              I think that we have to address a situation at the very core of how we work.<br>
+              There is a duality, and if we manage to resolve this duality, we will have created a common ground at the very core of how we work.<br>
             </p>
-        
           </section>
-
-
-
-
 
           <section>
             <h2>Duality</h2>
@@ -247,53 +242,59 @@
 
               <p>At the end, everbody needs to pay the consequences.<br>
                 From my point of view, this duality is one of the biggest problems in modern software development.<br>
-                Maybe we need another crisis for this to change. Maybe the growing success of the no-code movement will teach us.<br>
+                Maybe we need another big crisis for this to change. Maybe the growing success of the no-code movement will teach us.<br>
               </p>
 
               <p>Luckily, this article is about improvement and a positive outlook, and i promised a practical solution for this problem.<br>
                 It is not a silver bullet, but i hope i can demostrate that there is a choice.<br>
               </p>
+          </section>
 
-              <p>I have talked about changing the system.<br>
-                I want a system where this duality is resolved.<br>
-                Where a scenario will be an common artifact in designing, development and testing.<br>
-                To make a change that brings us together.<br>
-              </p>
+          <section>
+            <h2>TLDNR</h2>
+            <p>In this article, we have seen that different specializations not only need to be coordinated - they need to be integrated as well.<br>
+              Only then, we go to the next level where we can work on a shared understanding - and this will open the door for effective teams.<br>
+              Integration needs to be a central property like the process itself.<br>
+              To be able to do so, we resolve a duality at the very core of how we work, and gain something that can be described as a common ground.<br>
+              This common ground is prominently present for every specialization - it is the artifact - the scenario we want to enable.
+          </p>
           </section>
 
 
           <section>
             <h2>Experiment</h2>
+
             <p>At this point, it all comes down to an experiment.<br>
               What will happen if the scenarios we want to enable are directly reflected in our code?<br>
               What will happen if the scenarios can be added/removed in a modular way?<br>
-              What if the same scenario can be found in design, development and testing?<br>
-              Will this be a common ground and an opportunity to unite different specializations?<br>
+              If the same scenario can be found in design, development and testing, will this be a common ground and an opportunity to unite different specializations?<br>
             </p>
 
             <p>For this experiment, we will develop a simple image slider.<br>
               Our team has agreed on a couple of requirements.<br>
-            <ul>
-              <li>only one slide (the current slide) is shown</li>
-              <li>The user is able to slide to the left and right.</li>
-              <li>The slider can rotate in both directions.</li>
-              <li>The slider will have a play function and slides after x ms.</li>
-              <li>The slider can be paused at any time.</li>
-              <li>Bulletpoints can be used to jump to a specific slide.</li>
-              <li>If the user changes slides manually, the slider will pause.</li>
-              <li>The slider will start to play automatically</li>
-            </ul>
-          </p>
-          <p>Designers have scetched some first designs, and included input from the developers.<br>
-            They have found some technical requirements and edge-cases that need to be reflected in the UI as well.<br>
-          <ul>
-            <li>The slides are loaded asyncrounously. (show a spinner ?)</li>
-            <li>If there is only one slide, the slider has no functionality (show no buttons ?)</li>
-          </ul>
-          <p>The developers started coding and this is the scaffolding of the discussed scenarios in code:<br>
-        </p>
+              <ul>
+                <li>only one slide (the current slide) is shown</li>
+                <li>The user is able to slide to the left and right.</li>
+                <li>The slider can rotate in both directions.</li>
+                <li>The slider will have a play function and slides after x ms.</li>
+                <li>The slider can be paused at any time.</li>
+                <li>Bulletpoints can be used to jump to a specific slide.</li>
+                <li>If the user changes slides manually, the slider will pause.</li>
+                <li>The slider will start to play automatically</li>
+              </ul>
+            </p>
 
-          </p>
+            <p>Designers have scetched some first designs, and included input from the developers.<br>
+              They have found some technical requirements and edge-cases that need to be reflected in the UI as well.<br>
+              <ul>
+                <li>The slides are loaded asyncrounously. (show a spinner ?)</li>
+                <li>If there is only one slide, the slider has no functionality (show no buttons ?)</li>
+              </ul>
+            </p>
+
+            <p>The developers started coding and this is the scaffolding of the discussed scenarios in code:<br>
+            </p>
+
           <p class="code">
     (scenario) => {
       const items = scenario(loadItems, [url]).value;
@@ -314,48 +315,59 @@
       }
     };</p>
 
-    <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
-      There is a lot to unpack how the modular scenario system is constructed.<br>
-      Most ideas came from <a href="http://www.wisdom.weizmann.ac.il/~bprogram/">Behavioral Programming</a>. 
-      I implemented this as a react-hook with no 3rd party dependencies.<br>
-      A detailed description will follow in the next article.<br>
-    </p>
-    
-    <p>The scaffolding is needed for a simple reason: hierarchy.<br>
-      Some scenarios only make sense, if other scenarios are enabled or in a specific state.<br>
-      For example, we do not need the scenario "jumpToSlide", if there is only one slide.<br>
-    </p>
+          <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
+            There is a lot to unpack how the modular scenario system is constructed.<br>
+            Most ideas came from <a href="http://www.wisdom.weizmann.ac.il/~bprogram/">Behavioral Programming</a>. 
+            I implemented this as a react-hook with no 3rd party dependencies.<br>
+            A detailed description will follow in the next article.<br>
+          </p>
+          
+          <p>The scaffolding is needed for a simple reason: hierarchy.<br>
+            Some scenarios only make sense, if other scenarios are enabled or in a specific state.<br>
+            For example, we do not need the scenario "jumpToSlide", if there is only one slide.<br>
+          </p>
+        </section>
+    <section>
+      <h2>First Findings</h2>
+      <p>
+        <ol>
+          <li>This shows that it is indeed possible to keep the artifact as a central element.<br>
+            That we have the possibility to transition from the scenario in the reqirement to the scenario in code.<br>
+            Not all requirements can be modularized this way.<br>
+            For example, technical requirements like "needs to be compatible with IE 11" are excluded.<br>
+          </li>
+          <li>We have provided a great place to start, when we want to understand our code.<br>
+            In this scenario scaffolding, we find all the behaviours we enabled for this component.<br>
+            This can be amazing for reusable components.<br>
+            Instead of heaving an options-json to enable/disable functionalty, we can simply change the scaffolding.<br>
+          </li>
+          <li>Making changes requires the developer to understand how the scenarios need to be constructed.<br>
+            If the developer understands this modular system, he is able to add new scenarios, without knowing how other scenarios are implemented.<br>
+          </li>
+          <li>That it is possible to integrate scenario based programming into the current way we write UI Components.<br>
+            This is demonstrated by using a react-hook.<br>
+          </li>
+        </ol>
+      </p>
+    </section>
 
-    <p><p>
+    <section>
+        <h2>What Is Next?</h2>
+        <p>First, thanks for reading this article.<br>
+          If you would like to say hello, please do so.<br>
+        </p>
 
-    <h2>First Findings</h2>
-    <p>
-      <ol>
-        <li>This shows that it is indeed possible to keep the artifact in code.<br>
-          That we have the possibility to transition from the scenario in the reqirement to the scenario in code.<br>
-          Not all requirements can be modularized this way.<br>
-          For example, technical requirements like "needs to be compatible with IE 11" can not be a scenario in code.<br>
-        </li>
-        <li>We have provided a great place to start, when we want to understand our code.<br>
-          In this scenario scaffolding, we find all the behaviours we enabled for this component.<br>
-          This can be amazing for reusable components.<br>
-          Instead of heaving an options-json to enable/disable functionalty, we can simply change the scaffolding.<br>
-        </li>
-        <li>Making changes requires the developer to understand how the scenarios need to be constructed.<br>
-          If the developer understands this modular system, he is able to add new scenarios, without knowing how other scenarios are implemented.<br>
-        </li>
-        <li>That it is possible to integrate scenario based programming into the current way we write UI Components.<br>
-          This is demonstrated by using a react-hook.<br>
+        <p>In the next article i go into code details. You can find the complete code here.<br>
+          Then i will show the benefits for tesing and describe a full circle with this integrative core.<br>
+          Use this RSS-Feed to be notified or follow me at @thomas_deutsch.<br>
+        </p>
 
-        </li>
-      </ol>
-    </p>
+        <p>Thanks to all who have inspired this article.<br>
+        </p>
+      
+    </section>
 
 
-    </p>
-
-
-  </section>
   </article>
   <aside>
     <img src="img/profile.jpg"/>
