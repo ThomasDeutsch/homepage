@@ -92,9 +92,10 @@ article header {
 
 article .date {
     position: absolute;
-    font-size: 0.8em;
     right: 2.5em;
     top: 1em;
+    font-size: 1.em;
+    opacity: 0.7;
 }
 
 article section {
