@@ -12,15 +12,15 @@ html {
 
 @font-face {
     font-family: 'geomanistregular';
-    src: url('fonts/geomanist-regular.woff2') format('woff2'),
-         url('fonts/geomanist-regular.woff') format('woff');
+    src: url('/fonts/geomanist-regular.woff2') format('woff2'),
+         url('/fonts/geomanist-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'TiemposTextRegular';
-    src: url('fonts/TiemposText-Regular.woff') format('woff');
+    src: url('/fonts/TiemposText-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
