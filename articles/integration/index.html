@@ -342,7 +342,8 @@
     }
   }
 };</pre></div>
-      <p>The difference between this, and something like redux-saga is best described when we look at the scenario itself.<br>
+      <p>What is the difference between this, and something like redux-saga?<br>
+        The main goal here, is to represent the scenarios in code, the goals of redux-saga is to make side-effects easier to manage.<br>
         Scenarios represent threads of behavior. Those threads run above the software construct.<br>
       </p>
 
@@ -352,8 +353,8 @@
       </figure>
 
       <p>Following a thread like "the user needs to register before he can post a comment" can touch many parts of the construct.<br>
-        For example the button to send a request, or the service service that make the api call.<br>
-        The main goal here, is to represent the scenarios in code, the goals of redux-saga is to make side-effects easier to manage.<br>
+        For example the button to send a request, or the service that make the api call can be part of the same thread, even if they are in different parts of the construct.<br>
+        Usually, the developer needs to keep those threads in his head when i tries to understand the code.<br>
       </p>
 
       <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
@@ -398,11 +399,11 @@
         <p>First, thanks for reading this article.<br>
           If you would like to say hello, please do so.<br>
           Do you have other ideas on how to enable integration as a central part of your process?<br>
-          Do you have questions? Any suggestions on how to improve this article?<br>
         </p>
 
-        <p>In the next article i go into code details. You can find the complete code here.<br>
+        <p>In the next article i go into code details.<br>
           Then i will show the benefits for testing and describe a full circle with this integrative core.<br>
+          It turns out that scenarios really shine, when we look at intra-component functionality.<br>
           Use <a href="../../rss.xml">this RSS-Feed</a> to be notified.<br>
           Or follow me at twitter: <a href="https://twitter.com/thomas_deutsch">@thomas_deutsch</a>.<br>
         </p>
