@@ -295,9 +295,12 @@
     }
   }
 };</pre></div>
-      <p>The scenarios are represented in our code.<br>
-        If a developer needs to understand what a software can do, this is a great way to start.<br>
-      </p>
+
+</section>
+<section>
+  <h2>Scenarios</h2>
+      <p>The scenarios are represented in our code, they are collected in this scaffolding.
+        They are not complected into the code and can be found at a single place.</p>
 
       <figure>
           <img src="img/scenariosandconstruct.svg" alt="">
@@ -309,16 +312,42 @@
         Usually, the developer needs to keep those scenarios in his head when he tries to understand the code.<br>
       </p>
 
-      <p>This means, that we add an abstraction layer. This will not result in performance benefits, but opens new possibilities.<br>
+      <p>This means, that we add an executable model that acts as a layer above the construct.<br>
         <a href="https://xstate.js.org/docs/about/goals.html#choosing-xstate">Statecharts</a> solve some of the same problems.<br>
-        They also add a layer above the construct that acts as an executable model, to make sure that the user is only able to take valid actions.<br>
-        Statecharts and Scenario Based Programming were both introduced by <a href="http://www.wisdom.weizmann.ac.il/~harel/papers.html">Prof. David Harel</a>.<br>
+        They also add an executable model, to make sure that the user is only able to take valid actions.<br>
+        They also serve an integrative purpose, as people from different disciplines can use one artifact (the statechart graph).<br>
       </p>
 
+      <p class="expamle">
+        From <a href="http://www.wisdom.weizmann.ac.il/~harel/papers/Statecharts.History.pdf">Statecharts in the Making</a>:<br>
+        I recall an anecdote from
+        somewhere in late 1983, in which in the midst of one of the
+        sessions at the IAI the blackboard contained a rather
+        complicated statechart that specified the intricate behavior
+        of some portion of the Lavi avionics system. I don't quite
+        remember now, but it was considerably more complicated
+        than the statecharts in Figs. 7–9. There was a knock on the
+        door and in came one of the air force pilots from the
+        headquarters of the project. He was a member of the
+        "customer" requirements team, so he knew all about the
+        intended aircraft (and eventually he would probably be able
+        to fly one pretty easily too…), was smart and intelligent,
+        but he had never seen a state machine or a state diagram
+        before, not to mention a statechart. He stared for a moment
+        at this picture on the blackboard, with its complicated mess
+        of blobs, blobs inside other blobs, colored arrows splitting
+        and merging, etc., and asked "What's that?" One of the
+        members of the team said "Oh, that's the behavior of the
+        so-and-so part of the system, and, by the way, these
+        rounded rectangles are states, and the arrows are transitions
+        between states". And that was all that was said. The pilot
+        stood there studying the blackboard for a minute or two,
+        and then said, "I think you have a mistake down here, this
+        arrow should go over here and not over there"; and he was
+        right.
 
-      <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
-        There is a lot to unpack how the modular scenario system is constructed.<br>
-        A detailed description will follow in the next article.<br>
+
+      </p>Statecharts and Scenario Based Programming were both introduced by <a href="http://www.wisdom.weizmann.ac.il/~harel/papers.html">Prof. David Harel</a>.<br>
       </p>
     </section>
 
