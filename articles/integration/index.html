@@ -298,9 +298,9 @@
 
 </section>
 <section>
-  <h2>Scenarios</h2>
-      <p>The scenarios are represented in our code, they are collected in this scaffolding.
-        They are not complected into the code and can be found at a single place.</p>
+  <h2>Scenarios And Statecharts</h2>
+      <p>We can see, that the scenarios are directly represented in our code.
+        But why should we introduce scenarios as an abstraction layer?</p>
 
       <figure>
           <img src="img/scenariosandconstruct.svg" alt="">
@@ -312,8 +312,8 @@
       </p>
 
       <p>This means, that we add an executable model that acts as a layer above the construct.<br>
-        <a href="https://xstate.js.org/docs/about/goals.html#choosing-xstate">Statecharts</a> solve some of the same problems.<br>
-        They provide an executable model, to make sure that the user is only able to take valid actions.
+        <a href="https://xstate.js.org/docs/about/goals.html#choosing-xstate">Statecharts</a> do so as well.<br>
+        They provide an executable model, to make sure that the user is only able to take valid actions and describe behaviour.
         They also serve as an integrative tool, as people from different disciplines can use one artifact: the statechart graph.<br>
       </p>
 
@@ -339,35 +339,14 @@
       </p>
       
       <p>Statecharts and Scenario Based Programming were both introduced by <a href="http://www.wisdom.weizmann.ac.il/~harel/papers.html">Prof. David Harel</a>.<br>
-      I can highly recommend to take a look at all the great work that <a href="https://github.com/davidkpiano/xstate">David Khourshid and over 100 contributors</a> have done with JavaScript statecharts.
       </p>
-
-
     </section>
-
 
     <section>
-      <h2>First Findings</h2>
-      <p>
-        <ol>
-          <li>This shows that it is indeed possible to keep the artifact as a central element.<br>
-            That we have the possibility to transition from the scenario in the requirement to the scenario in code.<br>
-            Not all requirements can be modularized this way.<br>
-            For example, technical requirements like "needs to be compatible with IE 11" are excluded.<br>
-          </li>
-          <li>We have provided a great place to start, when we want to understand our code.<br>
-            In this scenario scaffolding, we find all the behaviours we enabled for this component.<br>
-          </li>
-          <li>Making changes requires the developer to understand how the scenarios need to be constructed.<br>
-            If the developer understands this modular system, he is able to add new scenarios, without knowing how other scenarios are implemented.<br>
-          </li>
-          <li>That it is possible to integrate scenario based programming into the current way we write UI Components.<br>
-            This is demonstrated by using a react-hook.<br>
-          </li>
-        </ol>
-      </p>
-    </section>
+      <h2>TODO: Artifact Combinations</h2>
+      <p></p>
 
+    </section>
 
     <section>
         <h2>What Is Next?</h2>
