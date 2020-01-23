@@ -309,19 +309,17 @@
 
       <p>A scenario like "the user needs to register before he can post a comment" is a layer above the software construct.<br>
         For example: A button to send a request, or the service that makes an api call, can be part of the same scenario, even if they are in different parts of the construct.<br>
-        Usually, the developer needs to keep those scenarios in his head when he tries to understand the code.<br>
       </p>
 
       <p>This means, that we add an executable model that acts as a layer above the construct.<br>
         <a href="https://xstate.js.org/docs/about/goals.html#choosing-xstate">Statecharts</a> solve some of the same problems.<br>
-        They provide an executable model, to make sure that the user is only able to take valid actions.<br>
-        This also serve as an integrative tool, as people from different disciplines can use one artifact: the statechart graph.<br>
+        They provide an executable model, to make sure that the user is only able to take valid actions.
+        They also serve as an integrative tool, as people from different disciplines can use one artifact: the statechart graph.<br>
       </p>
 
       <p class="example">
         An excerpt from <a href="http://www.wisdom.weizmann.ac.il/~harel/papers/Statecharts.History.pdf">Statecharts in the Making</a> by Prof. David Harel:<br><br>
-        I recall an anecdote from
-        somewhere in late 1983, in which in the midst of one of the
+        I recall an anecdote from somewhere in late 1983, in which in the midst of one of the
         sessions at the IAI ... There was a knock on the
         door and in came one of the air force pilots from the
         headquarters of the project. He was a member of the
