@@ -123,22 +123,8 @@
               If the designer made a good job, the developers are able to understand enough to implement the necessary code.<br>
               The work is divided, and for a time this seems to be a great idea - but over time, we can see what we have missed.<br>
               The necessary interactions between designers and developers.<br>
-              Even if the developers are able to implement the code, what about the shared understanding of the whole?<br>
-              Why are the designs made that way?<br>
               Developers can get angry and frustrated. "What are the designers doing? This is way to complicated!".<br>
             </p>
-
-            <p>For many companies, this is the default behaviour. It is the culture of our economy: the division of labor.<br>
-            As a result, a strict process might be seen as overly beneficial to your employee.<br>
-            To be a worker in a process, your work is more easily measured and checked, to optimize for efficiency.<br>
-            Coordination enables us to do things the right way.</p>
-
-            <p>On the other hand, we have integration.<br>
-            Integrated teams share an understanding of the software and its goals.<br>
-            Only then, the question can be answered: Are we improving our software with this change?<br>
-            A team can be very efficient in adding new features, but features do not guarantee an improvement.<br>
-            Integration enables us to do the right thing.<br>
-          </p>
             
             <p>This is why we need coordination and integration. They are a complementary pair.<br>
               On a coordination level, we answer the questions on how to do things. This leads to knowledge.<br>
@@ -239,70 +225,67 @@
               In other words, it would be beneficial to talk the same language when we talk about software.<br>
           </p>
 
-          <p><b>The goal</b> is to keep an artifact (a scenario) during the whole process. From design over to development and testing.<br>
+          <p><b>The goal</b> is to keep an artifact during the whole process. From design over to development and testing.<br>
+          </p>
+
+          <p>Modelling languages for reactive systems, like Statecharts come to mind.<br>
           </p>
           </section>
 
 
           <section>
-            <h2>Experiment</h2>
-
-            <h4>TODO: Replace this with a user-flow example that shows the inter-object behaviour of SBP.</h4>
-
-            <p>At this point, it all comes down to an experiment.<br>
-              What will happen if the scenarios we want to enable are directly reflected in our code?<br>
+            <h2>Statecharts</h2>
+            
+            <p>TODO: short introduction on statecharts.<br>
+              They serve as an integrative tool, because the artifact can be used across different disciplines, as long at the participants understand
+              the basic building blocks. - todo: make clear that people need to learn the modelling language.<br>
+              People from different disciplines are enabled to communicate with the help of the statechart graph.<br>
+            </p>
+      
+            <p class="example">
+              An excerpt from <a href="http://www.wisdom.weizmann.ac.il/~harel/papers/Statecharts.History.pdf">Statecharts in the Making</a> by Prof. David Harel:<br><br>
+              I recall an anecdote from somewhere in late 1983, in which in the midst of one of the
+              sessions at the IAI ... There was a knock on the
+              door and in came one of the air force pilots from the
+              headquarters of the project. He was a member of the
+              "customer" requirements team ... he had never seen a state machine or a state diagram
+              before, not to mention a statechart.<br> 
+              He stared for a moment at this picture on the blackboard, with its complicated mess
+              of blobs, blobs inside other blobs, colored arrows splitting
+              and merging, etc., and asked "What's that?"<br>
+              One of the members of the team said "Oh, that's the behavior of the
+              so-and-so part of the system, and, by the way, these
+              rounded rectangles are states, and the arrows are transitions
+              between states". And that was all that was said.<br>
+              The pilot stood there studying the blackboard for a minute or two,
+              and then said, "I think you have a mistake down here, this
+              arrow should go over here and not over there"; and he was
+              right.
             </p>
 
-            <p>For this experiment, we will develop a simple image slider.<br>
-              Our team has agreed on a couple of requirements.<br>
-              <ul>
-                <li>only one slide (the current slide) is shown</li>
-                <li>The user is able to slide to the left and right.</li>
-                <li>The slider can rotate in both directions.</li>
-                <li>The slider will have a play function and slides after x ms.</li>
-                <li>The slider can be paused at any time.</li>
-                <li>Bulletpoints can be used to jump to a specific slide.</li>
-                <li>If the user changes slides manually, the slider will pause.</li>
-                <li>The slider will start to play automatically</li>
-              </ul>
-            </p>
+            <p>Todo: The statechart approach is intra-object, in that ultimately
+                the recommendation is to prepare a statechart for each
+                object of the system (or for each task, function, component,
+                etc., whatever artifacts your system will be composed of).
+                Of course, the statecharts are to also contain information
+                about the communication between the objects, and one
+                could build special controlling statecharts to concentrate on
+                these aspects; however, by and large, the idea of finite-state
+                machines in general, and statecharts in particular, is to
+                provide a way for specifying the behavior of the system per
+                object in an intra-object fashion. The more recent work has
+                to do with scenario-based, inter-object specification. </p>
 
-            <p>Designers have sketched some first designs, and included input from the developers.<br>
-              They have found async processes and edge-cases that need to be reflected in the UI as well.<br>
-              <ul>
-                <li>The slides are loaded asynchronously. (show a spinner ?)</li>
-                <li>If there is only one slide, the slider has no functionality (show no buttons ?)</li>
-              </ul>
-            </p>
+          </section>
 
-            <p>The developers started coding and this is the scaffolding of the discussed scenarios in code:<br>
-            </p>
 
-          <div style="background: #f0f3f3; overflow:auto;font-size:.8em; padding:1em; ">
-  <pre style="margin: 0; line-height: 125%;width:0;">(scenario) <span style="color: #555555">=&gt;</span> {
-  <span style="color: #006699; font-weight: bold">const</span> items <span style="color: #555555">=</span> scenario(loadItems, [url]).value;
-  <span style="color: #006699; font-weight: bold">if</span>(items) {
-    <span style="color: #006699; font-weight: bold">const</span> index <span style="color: #555555">=</span> scenario(showCurrentSlide, [items]).value;
-    <span style="color: #006699; font-weight: bold">if</span>(items.length <span style="color: #555555">&gt;</span> <span>1</span>) {
-      scenario(jumpToSlide, [items.length]);
-      <span style="color: #006699; font-weight: bold">const</span> leftRight <span style="color: #555555">=</span> scenario(slideLeftRight, [index, items.length]);
-      <span style="color: #006699; font-weight: bold">if</span>(leftRight) {
-        scenario(rotate, [index, items.length]);
-        <span style="color: #006699; font-weight: bold">const</span> isPlaying <span style="color: #555555">=</span> scenario(playPause, [<span>3000</span>]).value;
-        <span style="color: #006699; font-weight: bold">if</span>(isPlaying) {
-          scenario(pauseOnIndexChange);
-        }
-        scenario(autoplay);
-      }
-    }
-  }
-};</pre></div>
-
-</section>
 <section>
-  <h2>Scenarios And Statecharts</h2>
-      <p>We can see, that the scenarios are directly represented in our code.
-        But why should we introduce scenarios?</p>
+  <h2>Inter-Object Modelling</h2>
+      <p>The idea is to concentrate on specifying the behavior between
+          and among the objects (or tasks, functions, components,
+          etc.). The main lingua franca for describing the behavior of
+          the system would have to be a language for specifying
+          communication and collaboration between the objects</p>
 
       <figure>
           <img src="img/scenariosandconstruct.svg" alt="">
@@ -311,47 +294,21 @@
 
       <p>For example: A button to send a request, or the service that makes an api call, can be part of the same scenario, even if they are in different parts of the construct.<br>
       </p>
-
-      <p>This means, that we add an executable model that acts as a layer above the construct.<br>
-        <a href="https://xstate.js.org/docs/about/goals.html#choosing-xstate">Statecharts</a> do so as well.<br>
-        They provide an executable model, to make sure that the user is only able to take valid actions and describe behaviour.
-        They also serve as an integrative tool, as people from different disciplines can use one artifact: the statechart graph.<br>
-      </p>
-
-      <p class="example">
-        An excerpt from <a href="http://www.wisdom.weizmann.ac.il/~harel/papers/Statecharts.History.pdf">Statecharts in the Making</a> by Prof. David Harel:<br><br>
-        I recall an anecdote from somewhere in late 1983, in which in the midst of one of the
-        sessions at the IAI ... There was a knock on the
-        door and in came one of the air force pilots from the
-        headquarters of the project. He was a member of the
-        "customer" requirements team ... he had never seen a state machine or a state diagram
-        before, not to mention a statechart.<br> 
-        He stared for a moment at this picture on the blackboard, with its complicated mess
-        of blobs, blobs inside other blobs, colored arrows splitting
-        and merging, etc., and asked "What's that?"<br>
-        One of the members of the team said "Oh, that's the behavior of the
-        so-and-so part of the system, and, by the way, these
-        rounded rectangles are states, and the arrows are transitions
-        between states". And that was all that was said.<br>
-        The pilot stood there studying the blackboard for a minute or two,
-        and then said, "I think you have a mistake down here, this
-        arrow should go over here and not over there"; and he was
-        right.
-      </p>
-
-
       <p>The big difference between Scenario Based Programming is that scenarios are intra-object. Statecharts are intra-Object: https://arxiv.org/pdf/1911.10691.pdf<br>
       </p>
     </section>
 
+    
     <section>
-      <h2>Todo: User Flows</h2>
+      <h2>Scenario Based Programming</h2>
+
+      <h4>TODO: show a user-flow example that shows the inter-object behaviour of SBP.</h4>
       <ul>
-        <li>show user flow</li>
-        <li>add scenario based programming elements</li>
-        <li>describe interactions between UX and DEV</li>
-        <li>describe wait, block and request</li>
-      </ul>
+          <li>show user flow</li>
+          <li>add scenario based programming elements</li>
+          <li>describe interactions between UX and DEV</li>
+          <li>describe wait, block and request</li>
+        </ul>
     </section>
 
     <section>
