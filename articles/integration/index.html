@@ -240,9 +240,9 @@
 
           <section>
             <h2>Resolving</h2>
-            <p>In this article, we have seen that different specializations not only need to be coordinated - they need to be integrated as well.<br>
-              This would help us to work on a shared understanding - and this will open the door for effective teams.<br>
-              In other words, it would help to talk the same language when we talk about software.<br>
+            <p>Different specializations not only need to be coordinated - they need to be integrated as well.<br>
+              To enable integration between two disciplines, we need something that serves as a common ground.<br>
+              In other words, it would be beneficial to talk the same language when we talk about software.<br>
           </p>
 
           <p><b>The goal</b> is to keep an artifact (a scenario) during the whole process. From design over to development and testing.<br>
@@ -303,7 +303,8 @@
     }
   }
 };</pre></div>
-      <p>Scenarios represent threads of behavior. Those threads run above the software construct.<br>
+      <p>A scenario we defined has made its way into the code.<br>
+        If a developer needs to understand what a software can do, this is a great way to start.<br>
       </p>
 
       <figure>
@@ -311,9 +312,9 @@
           <figcaption>scenarios are like threads that use different parts of the construct.</figcaption>
       </figure>
 
-      <p>A thread like "the user needs to register before he can post a comment" can touch many parts of the construct.<br>
-        For example the button to send a request, or the service that make the api call can be part of the same thread, even if they are in different parts of the construct.<br>
-        Usually, the developer needs to keep those threads in his head when he tries to understand the code.<br>
+      <p>A scenario like "the user needs to register before he can post a comment" is a layer above the software construct.<br>
+        For example: A button to send a request, or the service that makes an api call, can be part of the same scenario, even if they are in different parts of the construct.<br>
+        Usually, the developer needs to keep those scenarios in his head when he tries to understand the code.<br>
       </p>
 
       <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
@@ -334,8 +335,6 @@
           </li>
           <li>We have provided a great place to start, when we want to understand our code.<br>
             In this scenario scaffolding, we find all the behaviours we enabled for this component.<br>
-            This can be amazing for reusable components.<br>
-            Instead of heaving an options-json to enable/disable functionality, we can simply change the scaffolding.<br>
           </li>
           <li>Making changes requires the developer to understand how the scenarios need to be constructed.<br>
             If the developer understands this modular system, he is able to add new scenarios, without knowing how other scenarios are implemented.<br>
