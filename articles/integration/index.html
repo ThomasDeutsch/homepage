@@ -219,8 +219,9 @@
 
               <h4>2. enabling unwanted scenarios</h4>
               <p>When we implement a new feature, we add new functionality to parts of our construct - 
-                but what unwanted scenarios we have we accidentally enabled, too? can we test this?<br>
-                Bob Martin tells me that i need "negative tests". It is like the advice to "expect the unexpected".
+                but what unwanted scenarios we have we accidentally enabled, too?<br>
+                Bob Martin tells me that i need "negative tests".<br>
+                It is like the advice to "expect the unexpected" - those tests are not easy to find.<br>
               </p>
               
               <h4>3. change of mindset</h4>
@@ -307,6 +308,13 @@
         For example: A button to send a request, or the service that makes an api call, can be part of the same scenario, even if they are in different parts of the construct.<br>
         Usually, the developer needs to keep those scenarios in his head when he tries to understand the code.<br>
       </p>
+
+      <p>This means, that we add an abstraction layer. This will not result in performance benefits, but opens new possibilities.<br>
+        <a href="https://xstate.js.org/docs/about/goals.html#choosing-xstate">Statecharts</a> solve some of the same problems.<br>
+        They also add a layer above the construct that acts as an executable model, to make sure that the user is only able to take valid actions.<br>
+        Statecharts and Scenario Based Programming were both introduced by <a href="http://www.wisdom.weizmann.ac.il/~harel/papers.html">Prof. David Harel</a>.<br>
+      </p>
+
 
       <p>If you want to go into the details - <a href="https://codesandbox.io/s/first-final-design-6xccf">here is the complete code</a>.<br>
         There is a lot to unpack how the modular scenario system is constructed.<br>
