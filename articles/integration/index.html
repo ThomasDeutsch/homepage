@@ -34,8 +34,7 @@
             <p>A cost that needs to be addressed: with every specialization  comes the need for integration.<br>
               I would argue, that this is mostly overlooked and it creates one of the biggest problems in modern software development.
             </p>
-            <p>In this article, i will define the meaning of integration and why we need to address it.<br>
-              I will describe a systemic problem at the very core of how we work, <br>
+            <p>In this article, i will describe a systemic problem at the very core of how we work,<br>
               and show a solution to resolve this problem - something you can use today.
             </p>
             <p>This is all in good spirit, as this article is about improvement and a positive outlook on what is possible.</p>
@@ -46,7 +45,7 @@
             <h2>System And Parts</h2>
 
             <p>A way to look at our situation, is through the lens of Systems Thinking.</p>
-            <p>Systems Thinking was pioneered by the work of <a href="https://en.wikipedia.org/wiki/Russell_L._Ackoff">Russell Ackoff</a>. In this video, he talks about improvement. Something that you may see as fitting for this article.</p>
+            <p>Systems Thinking was pioneered by the work of <a href="https://en.wikipedia.org/wiki/Russell_L._Ackoff">Russell Ackoff</a>.</p>
               <figure class="video" id="video1">
                 <img src="img/playvideo.jpg" alt="play the youtube video">
                 <svg version="1.1" id="YouTube_Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -73,15 +72,15 @@
                 </svg>
                 <figcaption></figcaption>
               </figure>
-            <p>We are facing a systemic problem:</p>
+            <p>And it seems that we are facing a systemic problem.</p>
 
             <p>We are dividing the software development into parts (specializations).
                 The assumption is, that if we improve every part separately, the system as a whole will improve.<br>
                 But this divide and conquer strategy is clarly not working as expected.<br>
                 Software development as a whole, can't be divided into independent parts.<br>
                 The parts are all interconnected. Improving a part will not necessarily improve the system as a whole.<br>
-                Over time, we make software development worse.<br/>
-                Most benefits will come from the interactions of the disciplines - not from the parts taken separately.<br/>
+                Over time it can have the opposite effect - we make software development worse.<br/>
+                System Theory tells us that we need to look at the interactions of the disciplines - not to the parts taken separately.<br/>
             </p>
 
             <p class="example">
@@ -92,21 +91,16 @@
               For the best possible house, no room might be the best possible room.<br>
               Everything needs to be evaluated against the improvement of the whole, the interconnection of all parts.<br>
             </p>
-
-            <pWe often act and think in silos, and our focus easily shifts from improving the software as a whole to improving specific elements we see as important.<br>
-              UI-redesigns, performance optimizations and better code abstraction layers - there is always something we can make better.<br>
-              At the end of the day it comes down to what we have done with our limited time, money and information.<br>
-              If we only improve the parts without the focus on the improvement of the software as a whole, we will not only be wasting
-              a lot of opportunities to deliver the best possible result to our customers.
-            </p>
           </section>
           
           <section class="content">
             <h2>Hidden Cost</h2>
       
             <p>We assume that the right process (for example an agile framework) will bring everything together, but
-            the truth is, that any process is limited to means of coordination.<br>
-            We need a good process, but it is no substitute for integrative methods.</p>
+            the truth is, that a process is limited to means of coordination.<br>
+            Yes, we need a good process, but it is no substitute for integrative methods.</p>
+            
+            TODO: Factory worker vs Think worker
             
             <figure>
               <img src="img/coordinationVsIntegration.svg" alt="">
@@ -117,7 +111,7 @@
               Without it, we are only able to throw our work over the fence for the next team to continue.<br>
             </p>
 
-            <p class="example">There is something called a "Developer Handoff".<br>
+            <p class="example">"Developer Handoff".<br>
               A process, where a designer will hand the results over to the development team.<br>
               If the designer made a good job, the developers are able to understand enough to implement the necessary code.<br>
               The work is divided, and for a time this seems to be a great idea - but over time, we can see what we have missed.<br>
@@ -231,115 +225,6 @@
           <p>Modelling languages for reactive systems, like Statecharts come to mind.<br>
           </p>
           </section>
-
-
-          <section>
-            <h2>Statecharts</h2>
-            
-            <p>TODO: short introduction on statecharts.<br>
-              They serve as an integrative tool, because the artifact can be used across different disciplines, as long at the participants understand
-              the basic building blocks. - todo: make clear that people need to learn the modelling language.<br>
-              People from different disciplines are enabled to communicate with the help of the statechart graph.<br>
-            </p>
-      
-            <p class="example">
-              An excerpt from <a href="http://www.wisdom.weizmann.ac.il/~harel/papers/Statecharts.History.pdf">Statecharts in the Making</a> by Prof. David Harel:<br><br>
-              I recall an anecdote from somewhere in late 1983, in which in the midst of one of the
-              sessions at the IAI ... There was a knock on the
-              door and in came one of the air force pilots from the
-              headquarters of the project. He was a member of the
-              "customer" requirements team ... he had never seen a state machine or a state diagram
-              before, not to mention a statechart.<br> 
-              He stared for a moment at this picture on the blackboard, with its complicated mess
-              of blobs, blobs inside other blobs, colored arrows splitting
-              and merging, etc., and asked "What's that?"<br>
-              One of the members of the team said "Oh, that's the behavior of the
-              so-and-so part of the system, and, by the way, these
-              rounded rectangles are states, and the arrows are transitions
-              between states". And that was all that was said.<br>
-              The pilot stood there studying the blackboard for a minute or two,
-              and then said, "I think you have a mistake down here, this
-              arrow should go over here and not over there"; and he was
-              right.
-            </p>
-
-            <p>Todo: The statechart approach is intra-object, in that ultimately
-                the recommendation is to prepare a statechart for each
-                object of the system (or for each task, function, component,
-                etc., whatever artifacts your system will be composed of).
-                Of course, the statecharts are to also contain information
-                about the communication between the objects, and one
-                could build special controlling statecharts to concentrate on
-                these aspects; however, by and large, the idea of finite-state
-                machines in general, and statecharts in particular, is to
-                provide a way for specifying the behavior of the system per
-                object in an intra-object fashion. The more recent work has
-                to do with scenario-based, inter-object specification. </p>
-
-          </section>
-
-
-<section>
-  <h2>Inter-Object Modelling</h2>
-      <p>The idea is to concentrate on specifying the behavior between
-          and among the objects (or tasks, functions, components,
-          etc.). The main lingua franca for describing the behavior of
-          the system would have to be a language for specifying
-          communication and collaboration between the objects</p>
-
-      <figure>
-          <img src="img/scenariosandconstruct.svg" alt="">
-          <figcaption>scenarios are like threads that use different parts of the construct.</figcaption>
-      </figure>
-
-      <p>For example: A button to send a request, or the service that makes an api call, can be part of the same scenario, even if they are in different parts of the construct.<br>
-      </p>
-      <p>The big difference between Scenario Based Programming is that scenarios are intra-object. Statecharts are intra-Object: https://arxiv.org/pdf/1911.10691.pdf<br>
-      </p>
-    </section>
-
-    
-    <section>
-      <h2>Scenario Based Programming</h2>
-
-      <h4>TODO: show a user-flow example that shows the inter-object behaviour of SBP.</h4>
-      <ul>
-          <li>show user flow</li>
-          <li>add scenario based programming elements</li>
-          <li>describe interactions between UX and DEV</li>
-          <li>describe wait, block and request</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>What Is Next?</h2>
-
-        <p>In the next article i go into code details.<br>
-          I will show the benefits for testing and describe a full circle with this integrative core.<br>
-          It turns out that scenarios really shine, when we look at intra-component functionality.<br>
-          Use <a href="../../rss.xml">this RSS-Feed</a> to be notified.<br>
-          Or follow me at twitter <a href="https://twitter.com/thomas_deutsch">@thomas_deutsch</a>.<br>
-        </p>
-
-        <p>Thanks for reading this article.<br>
-          If you would like to say hello, please do so.<br>
-          Do you have other ideas on how to enable integration as a central part of your process?<br>
-        </p>
-
-        <p>
-          <h4>If you want to know more...</h4>
-          <ul>
-            <li><a href="https://medium.com/@lmatteis/b-threads-programming-in-a-way-that-allows-for-easier-changes-5d95b9fb6928">B-threads article from Luca Matteis</a></li>
-            <li><a href="http://www.wisdom.weizmann.ac.il/~bprogram/">Behavioral Programming Introduction (page)</a></li>
-            <li><a href="https://www.youtube.com/watch?v=EbLh7rZ3rhU">Systems Thinking by Dr. Russell Ackoff (video)</a></li>
-            <li><a href="https://www.infoq.com/presentations/Simple-Made-Easy/">Simple made Easy - Rich Hickey (video)</a></li>
-            <li><a href="http://www.wisdom.weizmann.ac.il/~harel/papers/LiberatingProgramming.pdf">Can Programming Be Liberated, Period? (pdf)</a></li>
-            <li><a href="https://medium.com/@dschnr/better-reusable-react-components-with-the-overrides-pattern-9eca2339f646">Overrides Pattern (page)</a></li>
-          </ul>
-        </p>
-    </section>
-
-
   </article>
   <aside>
     <img src="img/profile.jpg"/>
